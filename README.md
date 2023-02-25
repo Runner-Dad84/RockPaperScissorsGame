@@ -9,10 +9,12 @@ TOP: Rock Paper Scissors
 		Paper - 34-66%
 		Scissor - 67-100%
 
-2. Ask for your the user choice.
+2. Ask for the user choice.
 	prompt for choice
-	function getPlayerChoice is input
-	return string value case insensitive
+	store choice to playerSelection
+2b.
+	Sting input to playerSelection
+	Return string value case insensitive 
 
 3. Compare user and computer choice.
 	function playRound (playerSelection, computerSelection)

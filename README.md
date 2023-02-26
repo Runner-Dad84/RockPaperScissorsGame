@@ -18,10 +18,14 @@ TOP: Rock Paper Scissors
 
 3. Compare user and computer choice.
 	function playRound (playerSelection, computerSelection)
-
-		Rock beats Scissor
-		Paper beat Rock
-		Scissor beats Paper
+		Player choice vs. Computer Choice
+		rock beats scissor
+		rock loses to paper
+		paper beats beats rock
+		paper loses to scissors
+		scissors beats paper
+		scissors loses to rock
+		player choice equals computer choice, tie
 
 4. Declare winner
 

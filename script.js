@@ -4,11 +4,11 @@ function getComputerChoice () {
     let computerPick = Math.floor(Math.random() * 100);
  
      if (computerPick <= 33){
-         computerPick = "Rock";
+         computerPick = "rock";
      } else if (computerPick >= 67){
-         computerPick = "Scissor";
+         computerPick = "scissors";
      } else {
-         computerPick = "Paper";
+         computerPick = "paper";
      }
  
      return computerPick;
@@ -20,3 +20,4 @@ function getComputerChoice () {
 function playerSelection (){
     return getPlayerChoice.toLowerCase(); 
 }
+

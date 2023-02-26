@@ -21,7 +21,7 @@ function playerSelection (){
     return getPlayerChoice.toLowerCase(); 
 }
 
-//Play One Round
+//Play One Round function
 function playRound(playerSelection, computerSelection) {
     switch (true) {
         case playerSelection === "rock" && computerSelection === "scissors":

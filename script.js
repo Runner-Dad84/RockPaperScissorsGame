@@ -59,5 +59,10 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function game (playRound) {
+    for (i = 0; i < 5; i++) {
+            console.log(`The score is player ${playerScore} vs. the computer ${computerScore} `)
+        }
+}
 
 

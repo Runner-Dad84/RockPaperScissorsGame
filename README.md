@@ -26,9 +26,9 @@ TOP: Rock Paper Scissors
 		scissors beats paper
 		scissors loses to rock
 		player choice equals computer choice, tie
+	Declare winner
 
-4. Declare winner
-
-5. Play a game to five
-	Reports results
-	function game() calls playRound
+4. Play a game to five 
+	function game
+	For each round add 1 for the winner.
+	If player OR computer equals 3, they win.

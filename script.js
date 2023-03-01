@@ -10,17 +10,18 @@ function getComputerChoice () {
      } else {
          computerPick = "paper";
      }
- 
-     return computerPick;
- };
-
- //Obtain player choice selection
- let getPlayerChoice = window.prompt("Rock, Paper or Scissors?");
- 
-function playerSelection (){
-    return getPlayerChoice.toLowerCase(); 
+    return computerPick;
 }
 
+ //Ask for player choice selection
+ let getInput = window.prompt("Rock, Paper or Scissors?");
+ 
+ //Return player choice - case insenitive (lowercase)
+ function playerSelection (){
+    let getPlayerChoice = getInput.toLowerCase();
+    return getPlayerChoice;
+}
+//Global Score Variables
 let computerScore = 0;
 let playerScore = 0;
 
@@ -59,9 +60,11 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+//Play Game
 function game (playRound) {
     for (i = 0; i < 5; i++) {
             console.log(`The score is player ${playerScore} vs. the computer ${computerScore} `)
+            
         }
 }
 

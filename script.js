@@ -1,25 +1,27 @@
+let playerSelection;
+let computerSelection;
 
 //Randomly select computer choice
 function getComputerChoice () {
-    let computerPick = Math.floor(Math.random() * 100);
+    computerSelection = Math.floor(Math.random() * 100);
  
-     if (computerPick <= 33){
-         computerPick = "rock";
-     } else if (computerPick >= 67){
-         computerPick = "scissors";
+     if (computerSelection <= 33){
+        computerSelection = "rock";
+     } else if (computerSelection >= 67){
+        computerSelection = "scissors";
      } else {
-         computerPick = "paper";
+        computerSelection = "paper";
      }
-    return computerPick;
+    return computerSelection;
 }
 
  //Ask for player choice selection
  let getInput = window.prompt("Rock, Paper or Scissors?");
  
  //Return player choice - case insenitive (lowercase)
- function playerSelection (){
-    let getPlayerChoice = getInput.toLowerCase();
-    return getPlayerChoice;
+ function getPlayerChoice (){
+    playerSelection = getInput.toLowerCase();
+    return playerSelection;
 }
 //Global Score Variables
 let computerScore = 0;

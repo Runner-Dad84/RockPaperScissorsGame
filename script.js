@@ -1,7 +1,6 @@
-let playerSelection;
+//Randomly select computer choice
 let computerSelection;
 
-//Randomly select computer choice
 function getComputerChoice () {
     computerSelection = Math.floor(Math.random() * 100);
  
@@ -15,20 +14,21 @@ function getComputerChoice () {
     return computerSelection;
 }
 
- //Ask for player choice selection
- let getInput = window.prompt("Rock, Paper or Scissors?");
- 
- //Return player choice - case insenitive (lowercase)
- function getPlayerChoice (){
-    playerSelection = getInput.toLowerCase();
+//Ask for player choice selection and make case insensitive (lowercase)
+let playerSelection;
+
+function Input() {
+    let ask = window.prompt("Rock, Paper or Scissors?");
+    playerSelection = ask.toLowerCase();
     return playerSelection;
 }
+
 //Global Score Variables
 let computerScore = 0;
 let playerScore = 0;
 
 //Play One Round function
-function playRound(playerSelection, computerSelection) {
+function playRound(Input, getComputerChoice) {
     switch (true) {
         case playerSelection === "rock" && computerSelection === "scissors":
             playerScore +=1
@@ -36,7 +36,7 @@ function playRound(playerSelection, computerSelection) {
             break;
         case playerSelection === "rock" && computerSelection === "paper":
             computerScore +=1
-            return("Rock is beat by scissors, you lose!")
+            return("Rock is beat by paper, you lose!")
             break;
         case playerSelection === "paper" && computerSelection === "rock":
             playerScore +=1
@@ -62,12 +62,5 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-//Play Game
-function game (playRound) {
-    for (i = 0; i < 5; i++) {
-            console.log(`The score is player ${playerScore} vs. the computer ${computerScore} `)
-            
-        }
-}
 
 

@@ -62,5 +62,16 @@ function playRound(Input, getComputerChoice) {
     }
 }
 
-
+//Play Game
+function game () {
+    while (computerScore < 3 && playerScore < 3){
+        getComputerChoice();
+        Input();
+        playRound();
+        console.log(`The score is player ${playerScore} vs. the computer ${computerScore} `)
+    };
+    if (playerScore === 3) {alert("You win!!!")} else {
+        alert("You lose!!");
+    };
+}
 

@@ -32,30 +32,30 @@ function playRound(Input, getComputerChoice) {
     switch (true) {
         case playerSelection === "rock" && computerSelection === "scissors":
             playerScore +=1
-            return("Rock beats scissors, you win!")
+            console.log("Rock beats scissors, you win!")
             break;
         case playerSelection === "rock" && computerSelection === "paper":
             computerScore +=1
-            return("Rock is beat by paper, you lose!")
+            console.log("Rock is beat by paper, you lose!")
             break;
         case playerSelection === "paper" && computerSelection === "rock":
             playerScore +=1
-            return("Paper beats rock, you win!")
+            console.log("Paper beats rock, you win!")
             break;
         case playerSelection === "paper" && computerSelection === "scissors":
             computerScore +=1
-            return("Paper is beat by scissors, you lose!")
+            console.log("Paper is beat by scissors, you lose!")
             break;
         case playerSelection === "scissors" && computerSelection === "paper":
             playerScore +=1
-            return("Scissors beats paper, you win!")
+            console.log("Scissors beats paper, you win!")
             break;
         case playerSelection === "scissors" && computerSelection === "rock":
             computerScore +=1
-            return("Scissors is beat by rock, you lose!")
+            console.log("Scissors is beat by rock, you lose!")
             break;
         case playerSelection === computerSelection:
-            return("It is a tie!")
+            console.log("It is a tie!")
             break;
         default:
             return("Please enter rock, paper or scissors");

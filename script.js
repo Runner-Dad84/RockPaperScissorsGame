@@ -24,8 +24,8 @@ function Input() {
 }
 
 //Global Score Variables
-let computerScore = 0;
-let playerScore = 0;
+let computerScore;
+let playerScore;
 
 //Play One Round function
 function playRound(Input, getComputerChoice) {
@@ -64,6 +64,9 @@ function playRound(Input, getComputerChoice) {
 
 //Play Game
 function game () {
+    computerScore = 0;
+    playerScore = 0;
+
     while (computerScore < 3 && playerScore < 3){
         getComputerChoice();
         Input();
@@ -74,4 +77,3 @@ function game () {
         alert("You lose!!");
     };
 }
-

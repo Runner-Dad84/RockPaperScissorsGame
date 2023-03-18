@@ -67,15 +67,22 @@ function game () {
     computerScore = 0;
     playerScore = 0;
 
-    while (computerScore < 3 && playerScore < 3){
-        getComputerChoice();
-        Input();
-        playRound();
-        console.log(`The score is player ${playerScore} vs. the computer ${computerScore} `)
-    };
-    if (playerScore === 3) {alert("You win!!!")} else {
-        alert("You lose!!");
-    };
+    //while (computerScore < 3 && playerScore < 3){
+    //    getComputerChoice();
+    //    Input();
+    //    playRound();
+    //    console.log(`The score is player ${playerScore} vs. the computer ${computerScore} `)
+   // };
+   // if (playerScore === 3) {alert("You win!!!")} else {
+   //     alert("You lose!!");
+   // };
 }
 
-//test
+//Button click listen
+
+const buttons = Array.from(document.querySelectorAll('.button'));
+
+buttons.forEach(button => button.addEventListener("click", e => {
+    
+    console.log(e);
+}));

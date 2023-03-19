@@ -1,5 +1,6 @@
 //Randomly select computer choice
 let computerSelection;
+let playerSelection;
 
 function getComputerChoice () {
     computerSelection = Math.floor(Math.random() * 100);
@@ -14,7 +15,7 @@ function getComputerChoice () {
     return computerSelection;
 }
 
-//Ask for player choice selection and make case insensitive (lowercase)
+/*Ask for player choice selection and make case insensitive (lowercase)
 let playerSelection;
 
 function Input() {
@@ -22,6 +23,7 @@ function Input() {
     playerSelection = ask.toLowerCase();
     return playerSelection;
 }
+*/
 
 //Global Score Variables
 let computerScore;
@@ -62,27 +64,26 @@ function playRound(Input, getComputerChoice) {
     }
 }
 
-//Play Game
+/*Play Game
 function game () {
     computerScore = 0;
     playerScore = 0;
 
-    //while (computerScore < 3 && playerScore < 3){
-    //    getComputerChoice();
-    //    Input();
-    //    playRound();
-    //    console.log(`The score is player ${playerScore} vs. the computer ${computerScore} `)
-   // };
-   // if (playerScore === 3) {alert("You win!!!")} else {
-   //     alert("You lose!!");
-   // };
+    while (computerScore < 3 && playerScore < 3){
+        getComputerChoice();
+        Input();
+        playRound();
+        console.log(`The score is player ${playerScore} vs. the computer ${computerScore} `)
+    };
+    if (playerScore === 3) {alert("You win!!!")} else {
+        alert("You lose!!");
+    };
 }
+*/
 
-//Button click listen
+buttons = document.querySelector('#section');
 
-const buttons = Array.from(document.querySelectorAll('.button'));
-
-buttons.forEach(button => button.addEventListener("click", e => {
-    
-    console.log(e);
-}));
+section.addEventListener("click", event => {
+    playerSelection = event.target.id;
+    console.log(playerSelection);
+});

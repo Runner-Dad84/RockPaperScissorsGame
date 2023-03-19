@@ -26,8 +26,8 @@ function Input() {
 */
 
 //Global Score Variables
-let computerScore;
-let playerScore;
+let computerScore = 0;
+let playerScore = 0;
 
 //Play One Round function
 function playRound(playerSelection, getComputerChoice) {
@@ -87,4 +87,9 @@ section.addEventListener("click", event => {
     playerSelection = event.target.id;
     getComputerChoice();
     console.log(playRound(playerSelection, getComputerChoice));
+
+    if (playerScore ===3) {
+        alert("You win!!!"); computerScore = 0; playerScore = 0} 
+    else if (computerScore ===3)  {
+        alert("You lose!!"); computerScore = 0; playerScore = 0} 
 });

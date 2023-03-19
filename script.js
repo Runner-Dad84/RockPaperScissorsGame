@@ -30,7 +30,7 @@ let computerScore;
 let playerScore;
 
 //Play One Round function
-function playRound(Input, getComputerChoice) {
+function playRound(playerSelection, getComputerChoice) {
     switch (true) {
         case playerSelection === "rock" && computerSelection === "scissors":
             playerScore +=1
@@ -85,5 +85,6 @@ buttons = document.querySelector('#section');
 
 section.addEventListener("click", event => {
     playerSelection = event.target.id;
-    console.log(playerSelection);
+    getComputerChoice();
+    console.log(playRound(playerSelection, getComputerChoice));
 });

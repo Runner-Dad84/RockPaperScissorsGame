@@ -67,13 +67,49 @@ function playRound(playerSelection, getComputerChoice) {
 section.addEventListener("click", event => {
     playerSelection = event.target.id;
     getComputerChoice();
-    console.log(playRound(playerSelection, getComputerChoice));
+    redBorder();
+    console.log(playRound(playerSelection, computerSelection));
 
     if (playerScore ===3) {
         alert("You win!!!"); computerScore = 0; playerScore = 0} 
     else if (computerScore ===3)  {
         alert("You lose!!"); computerScore = 0; playerScore = 0} 
 });
+
+//Border player pick gold and computer pick red.
+
+function redBorder () {
+    if (computerSelection === "rock") {
+        rockPic.style.borderColor = "red"
+    } else if (computerSelection === "paper") {
+        paperPic.style.borderColor = "red"
+    } else if (computerSelection === "scissors") {
+        scissorsPic.style.borderColor = "red"
+    }
+};
+
+let rockPic = document.getElementById("rock");
+let paperPic = document.getElementById("paper");
+let scissorsPic = document.getElementById("scissors");
+
+function clickedRock () {
+    rockPic.style.borderColor = "gold";
+    paper.style.borderColor = "gray";
+    scissors.style.borderColor = "gray";
+};
+
+function clickedPaper () {
+    rock.style.borderColor = "gray";
+    paperPic.style.borderColor = "gold";
+    scissors.style.borderColor = "gray";
+};
+
+function clickedScissors () {
+   rock.style.borderColor = "gray";
+   paper.style.borderColor = "gray";
+   scissorsPic.style.borderColor = "gold";
+};
+
 
 
 /*Ask for player choice selection and make case insensitive (lowercase)
